@@ -1,5 +1,7 @@
 function tenMinuteWalk(directions) {
-  return true;
+  if (directions.length < 10) {
+    return false;
+  }
 }
 
 module.exports = tenMinuteWalk;
