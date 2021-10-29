@@ -5,27 +5,21 @@ describe('tenMinuteWalk', () => {
     expect(tenMinuteWalk(['w', 's'])).toEqual(false);
   });
 
-  test('it returns true if number of north and south steps is the same', () => {
+  test('it returns true', () => {
     expect(
-      tenMinuteWalk(['n', 'n', 'n', 'n', 'n', 's', 's', 's', 's', 's'])
+      tenMinuteWalk(['w', 's', 'e', 'e', 'n', 'n', 'e', 's', 'w', 'w'])
     ).toEqual(true);
   });
 
-  test('it return false if number of north and south steps is different', () => {
+  test('it return false', () => {
     expect(
-      tenMinuteWalk(['n', 'n', 'n', 'n', 's', 's', 's', 's', 's', 's'])
+      tenMinuteWalk(['w', 's', 'e', 'n', 'n', 'e', 's', 'w', 'w', 'w'])
     ).toEqual(false);
   });
 
-  test('it returns true if number of west and east steps is the same', () => {
+  test('it returns false with a different example', () => {
     expect(
-      tenMinuteWalk(['w', 'w', 'w', 'w', 'w', 'e', 'e', 'e', 'e', 'e'])
-    ).toEqual(true);
-  });
-
-  test('it returns false if number of west and east steps is the same', () => {
-    expect(
-      tenMinuteWalk(['w', 'w', 'w', 'w', 'e', 'e', 'e', 'e', 'e', 'e'])
+      tenMinuteWalk(['w', 's', 'e', 's', 's', 'e', 's', 'w', 'n', 'n'])
     ).toEqual(false);
   });
 });
