@@ -1,7 +1,7 @@
 const tenMinuteWalk = require('../src/tenMinuteWalk');
 
 describe('tenMinuteWalk', () => {
-  test('it return true', () => {
+  test('it return false if lenght is less than 10', () => {
     expect(tenMinuteWalk(['n'])).toEqual(false);
   });
 
